@@ -1,12 +1,18 @@
 pipeline {
-  agent any
+  agent none
   stages {
     stage ('Build') {
       agent{
         label 'Agent One'
       }
       steps {
-      sh 'echo Running Build on Agent One1'
+        sh 'rm -rf ./kura_test_repo/cypress2'
+        sh '''
+          npm install
+          npm run build
+          sudo npm install -g serve
+          serve -s build
+          '''
       }
     }
     stage ('test') {
