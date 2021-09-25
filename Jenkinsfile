@@ -14,7 +14,7 @@ serve -s build
 }
 stage ('test') {
 agent {
-label 'Your agent label'
+label 'agent-linux1'
 }
 steps {
 sh '''
