@@ -4,8 +4,8 @@ pipeline {
     stage ('Build') {
       steps {
       sh 'echo $(pwd)'
-      //sh 'rm -rf ./D6/cypress'
-      /*sh '''
+      sh 'rm -rf ./D6_main/cypress'
+      /sh '''
         npm install
         npm run build
         sudo npm install -g serve
