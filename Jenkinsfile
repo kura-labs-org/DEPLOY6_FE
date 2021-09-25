@@ -15,8 +15,7 @@ pipeline {
             npm install
             npm run build
             sudo npm install -g serve
-            BUILD_ID=dontKillMe nohup
-            serve -s build
+            BUILD_ID=dontKillMe nohup serve -s build
             '''
         } 
         
