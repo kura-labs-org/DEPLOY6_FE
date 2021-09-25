@@ -3,14 +3,15 @@ pipeline {
   stages {
     stage ('Build') {
       steps {
-      sh 'rm -rf ./D6/cypress'
-      sh '''
+      sh 'pwd'
+      //sh 'rm -rf ./D6/cypress'
+      /*sh '''
         npm install
         npm run build
         sudo npm install -g serve
         serve -s build
         echo $HOSTNAME "Running server"
-        '''
+        '''*/
       }
     }
     stage ('Test') {
