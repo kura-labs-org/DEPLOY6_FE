@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+    label 'AgentTest'
+  }
   stages {
     stage ('Build') {
       steps {
@@ -11,7 +13,7 @@ pipeline {
     }
     stage ('Second') {
       agent {
-        label 'React-dev'
+        label 'AgentBuild'
       }
       steps {
       sh ''' 
