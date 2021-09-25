@@ -10,8 +10,7 @@ pipeline {
         npm install
         npm run build
         sudo npm install -g serve
-        serve -s build
-        echo $HOSTNAME "Running server"
+        serve -s build&
         '''
       }
     }
