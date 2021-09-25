@@ -40,7 +40,9 @@ pipeline {
       
       post {
         always {
-          junit 'results/cypress-report.xml'
+           dir('./kura_test_repo'){
+            junit 'results/cypress-report.xml'
+           }
         }
       }
     }
