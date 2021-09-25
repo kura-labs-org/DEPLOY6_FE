@@ -26,12 +26,16 @@ pipeline {
         label 'Agent Two'
       }
       steps {
-      sh '''
-        npm install cypress
-        npm install mocha
-        npx cypress run --env ip_addy=3.140.208.112 --spec ./cypress/integration/test.spec.js
-        '''
+        dir('./kura_test_repo'){
+          sh '''
+            npm install cypress
+            npm install mocha
+            npx cypress run --env ip_addy=3.140.208.112 --spec ./cypress/integration/test.spec.js
+            '''
+        }
+
       }
+      
       post {
         always {
           junit 'results/cypress-report.xml'
