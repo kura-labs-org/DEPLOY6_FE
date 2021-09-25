@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage ('Build') {
       steps {
-      sh 'rm -rf ./D6/cypress2'
+      sh 'rm -rf ./D6/cypress'
       sh '''
         npm install
         npm run build
