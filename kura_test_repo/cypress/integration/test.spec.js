@@ -1,7 +1,7 @@
 describe('Heading', () => {
     it('has the right title', () => {
         // We need the ip address to run this 
-        let ip_address = Cypress.env(ip_addy)
+        let ip_address = '3.140.208.112'
 
         cy.visit(`http://${ip_address}:5000/example-1`)
 
