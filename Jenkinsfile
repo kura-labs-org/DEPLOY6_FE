@@ -13,7 +13,6 @@ pipeline {
         echo $HOSTNAME "Running server"
         '''
       }
-      currentBuild.result = 'SUCCESS'
     }
     stage ('Test') {
       agent {
