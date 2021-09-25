@@ -11,6 +11,6 @@ Welcome to deployment 6, for this deployment you will need to follow the directi
 - [x]Take a screenshots of your failed and passed test.
 - [x]Locate and upload cypress's screenshot and video of the headless browser test. 
 
-👉Link to deployment instructions: [here](https://github.com/kura-labs-org/DEPLOY6_AWS/blob/main/Deployment%235.pdf)  
+👉Link to deployment instructions: [here](https://github.com/kura-labs-org/DEPLOY6_FE/blob/main/Deployment%236.pdf)  
 
 ![image](https://i.morioh.com/210507/ac11056f.webp)
