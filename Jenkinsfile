@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage ('Build') {
       steps {
-      sh 'pwd'
+      sh 'echo $(pwd)'
       //sh 'rm -rf ./D6/cypress'
       /*sh '''
         npm install
