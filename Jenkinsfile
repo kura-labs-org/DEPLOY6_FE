@@ -10,13 +10,16 @@ pipeline {
       }
       steps {
         sh 'rm -rf ./kura_test_repo/cypress2'
-        sh 'cd ./kura_test_repo'
-        sh '''
-          npm install
-          npm run build
-          sudo npm install -g serve
-          serve -s build
-          '''
+        dir('./kura_test_repo'){
+          sh '''
+            ls
+            npm install
+            npm run build
+            sudo npm install -g serve
+            serve -s build
+            '''
+        } 
+        
       }
     }
     stage ('test') {
