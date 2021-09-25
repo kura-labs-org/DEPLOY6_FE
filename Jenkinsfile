@@ -10,6 +10,7 @@ pipeline {
       }
       steps {
         sh 'rm -rf ./kura_test_repo/cypress2'
+        sh 'ls ./kura_test_repo'
         sh '''
           npm install
           npm run build
