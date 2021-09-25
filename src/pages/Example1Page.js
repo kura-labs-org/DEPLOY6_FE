@@ -13,6 +13,6 @@ const Wrapper = styled.div`
 
 export const Example1Page = () => (
     <Wrapper>
-        <h1>Awesome Web Application</h1>
+        <h1>My Awesome Web Application</h1>
     </Wrapper>
 );
