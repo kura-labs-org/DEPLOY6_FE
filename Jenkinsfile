@@ -1,13 +1,15 @@
 pipeline {
-  agent any
+  agent{
+
+    label 'Agent One'
+
+  }
   triggers {
     pollSCM('')
   }
   stages {
     stage ('Build') {
-      agent{
-        label 'Agent One'
-      }
+      
       steps {
         sh 'rm -rf ./kura_test_repo/cypress2'
         dir('./kura_test_repo'){
