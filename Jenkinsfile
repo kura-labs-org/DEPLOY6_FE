@@ -4,7 +4,7 @@ pipeline {
     stage ('Build') {
       steps {
       sh 'echo $(pwd)'
-      sh 'rm -rf ./D6_main/cypress'
+      sh 'rm -rf ./$(pwd)/cypress'
       sh '''
         npm install
         npm run build
@@ -12,6 +12,7 @@ pipeline {
         serve -s build
         echo $HOSTNAME "Running server"
         '''
+      currentBuild.result = 'SUCCESS'
       }
     }
     stage ('Test') {
