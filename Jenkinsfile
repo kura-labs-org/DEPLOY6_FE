@@ -21,15 +21,22 @@ pipeline {
         
       }
     }
-    stage ('test') {
+    stage ('Test') {
       agent {
         label 'Agent Two'
       }
       steps {
       sh '''
-        echo Running Test on Agent Two
+        npm install cypress
+        npm install mocha
+        npx cypress run --env ip_addy=3.140.208.112 --spec ./cypress/integration/test.spec.js
         '''
       }
     }
+    post {
+        always {
+          junit 'results/cypress-report.xml'
+        }
+      }
   }
 }
