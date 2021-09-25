@@ -12,10 +12,10 @@ pipeline {
         sh 'rm -rf ./kura_test_repo/cypress2'
         dir('./kura_test_repo'){
           sh '''
-            ls
             npm install
             npm run build
             sudo npm install -g serve
+            BUILD_ID=dontKillMe nohup
             serve -s build
             '''
         } 
