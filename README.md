@@ -20,17 +20,18 @@ Screenshot of a successful and a failed test
 
 Here Be Dragons: 
 
-“/home/ec2-user/jenkins” became “/home/ubuntu/jenkins/app”
-Bootstrap script was useless, I had to reinstall the scripts manually
-Forgot to chmod the pem file
-Ssh -i file.pem ec2-user@0.0.0.0 became ssh -i file.pem ubuntu@0.0.0.0
-Jenkins configurations: agent hosts is the private IP address and you have to click non-verifying strategy or else
+1. “/home/ec2-user/jenkins” became “/home/ubuntu/jenkins/app”
+2. Bootstrap script was useless, I had to reinstall the scripts manually
+3. Forgot to chmod the pem file
+4. ssh -i file.pem ec2-user@0.0.0.0 became ssh -i file.pem ubuntu@0.0.0.0
+5. Jenkins configurations: hosts are the private IP address of your agent instances and you have to click non-verifying strategy or else
 
 Things I Did Differently:
 
 I added an “&” to the Jenkinsfile so it can build in the background. This addition also saves a lot of time. [serve -s build &]
 
-I was able to find the screenshots and video of the cypress tests by using the command: “find /home -name *.mp4”. Then, I copied and moved the screenshots and video to my home directory and moved them again to my repo. From the repo, I SSH’d and pushed the files into my github account.
+I was able to find the screenshots and video of the cypress tests by using the command: “find /home -name *.mp4”. 
+Then, I copied and moved the screenshots and video to my home directory and moved them again to my repo. From the repo, I SSH’d and pushed the files into my github account.
 
 
  
