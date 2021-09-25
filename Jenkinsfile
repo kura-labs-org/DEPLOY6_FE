@@ -29,6 +29,6 @@ pipeline {
         }
           
       }
-    }"integrationFolder":"./cypress","testFiles":"**.spec.json"
+    }
   }
 } 
