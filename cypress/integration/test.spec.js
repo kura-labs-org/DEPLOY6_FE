@@ -6,5 +6,5 @@ describe('Heading', () => {
             .invoke('text')
             .should("equal", "My Awesome Web Application")
     });
-
+    cy.screenshot()
 });
