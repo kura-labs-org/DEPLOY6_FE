@@ -9,7 +9,7 @@ pipeline {
       sh '''
         npm ci 
         npm run build
-        npm install -g serve
+        sudo npm install -g serve
         serve -s build &
         '''
       }
