@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+    label 'amazon-linux' 
+  }
   stages {
     stage ('Build') {
       steps {
