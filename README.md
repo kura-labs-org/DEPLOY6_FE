@@ -34,7 +34,7 @@ Purpose of this deployment is to utilize a Jenkins controller and two other agen
 8. For branch source select Github and add your github credentials and select this repo or your own repo. 
 9. For build configuration select by Jenkinsfile.
 10. Now for the pipeline add the following to your Jenkinsfile. 
-11. Lastly change the test.spec.js file in ./kura_test_repo/cypress/integration
+11. Lastly change the test.spec.js file in ./kura_test_repo/cypress/integration to point to the ip address of Agent 1. 
 ```
 pipeline {
   agent{
