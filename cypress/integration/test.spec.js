@@ -4,7 +4,7 @@ describe('Heading', () => {
 
         cy.get('h1')
             .invoke('text')
-            .should("equal", "My wesome Web Application")
+            .should("equal", "My Awesome Web Application")
     });
 
 });
