@@ -34,7 +34,6 @@ Purpose of this deployment is to utilize a Jenkins controller and two other agen
 8. For branch source select Github and add your github credentials and select this repo or your own repo. 
 9. For build configuration select by Jenkinsfile.
 10. Now for the pipeline add the following to your Jenkinsfile. 
-11. Lastly change the test.spec.js file in ./kura_test_repo/cypress/integration to point to the ip address of Agent 1. 
 ```
 pipeline {
   agent{
@@ -87,6 +86,18 @@ pipeline {
   }
 }
 ```
+11. Lastly change the test.spec.js file in ./kura_test_repo/cypress/integration to point to the ip address of Agent 1. 
+12. Now schedule a build and run it.
+13. To find the screen shots, SSH into the agent which runs the cypress testing and locate the cypress folder.
+  ```
+  $ cd jenkins/workspace/{name of the build}/kura_test_repo/cypress
+  # Now you will see a screenshots and videos folder
+  ```
+14. Now if you want to actually save these files on your computer utilize the scp command, which allows you to copy files over ssh connections
+  ```
+  $ scp -i ssh_key.pem ubuntu@{your_ip_address}://home/ubuntu/jenkins/workspace/{name of your workspace}/kura_test_repo/cypress/videos/test.spec.js.mp4 .  
+  ```
+
 
 ## Troubleshooting and Tips
 - Make sure Agent one security groups are configured that allows for inbound of port 5000 and port 22. If port 5000 isn't set correctly then cypress can't run it's tests. 
