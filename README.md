@@ -18,6 +18,7 @@ Welcome to deployment 6, for this deployment you will need to follow the directi
 # Documentation of Deployment 6 - React App
 
 *This is the sixth deployment homework from [kura labs](https://github.com/kura-labs-org/DEPLOY6_FE).*
+**See [Deploy6](https://github.com/ibrahima1289/Deploy6) repository for video and screenshot of the headless browser test.**
 
 ## 1. Configure EC2 on AWS:
 
