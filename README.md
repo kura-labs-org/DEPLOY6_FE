@@ -152,6 +152,16 @@ After we fix it again, the buid is successfull.
 
 We will follow the procedure below:
 
+We will use the commands below to generate the video and screenshot in the [test.specs.js](https://github.com/ibrahima1289/Deploy6/blob/main/cypress/integration/test.spec.js) file. See [Cypress.screenshots](https://docs.cypress.io/api/cypress-api/screenshot-api#Syntax) for more details.
+
+```
+ Cypress.Screenshot.defaults({ capture: 'fullPage' });
+ cy.screenshot();
+```
+![](/images/Deploy6_7.PNG)
+
+The send a new build in Jenkins master.
+
 **Step 1**: First, locate the video and screenshot files.
 
 ```
