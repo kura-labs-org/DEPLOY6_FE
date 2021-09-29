@@ -4,7 +4,7 @@ describe('Heading', () => {
 
         cy.get('h1')
             .invoke('text')
-            .should("equal", "My Awesome Web Application")
+            .should("equal", "Awesome Web Application")
         Cypress.Screenshot.defaults({
         capture: 'runner',
         })
