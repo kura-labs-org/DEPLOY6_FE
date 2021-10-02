@@ -1,23 +1,28 @@
 pipeline {
-  agent any
+    agent {
+        label 'agent1'
+    }
   stages {
     stage ('Build') {
       steps {
       sh 'rm -rf ./kura_test_repo/cypress2'
       sh '''
         npm install
+        npm run build
+        sudo npm install -g serve
+        serve -s build &
         '''
       }
     }
     stage ('Second') {
       agent {
-        label 'React-dev'
-      }
+        label 'agent2'
+    }
       steps {
-      sh ''' 
-        npm install cypress
+      sh '''         
+        npm install cypress 
         npm install mocha
-        npx cypress run --spec ./cypress/integration/test.spec.js
+        npx cypress run --spec npx cypress run --spec ./cypress/integration/test.spec.js
         '''
       }
       post {
