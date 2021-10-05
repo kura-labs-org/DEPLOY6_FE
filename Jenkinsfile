@@ -1,11 +1,15 @@
 pipeline {
-  agent any
+  agent {
+    label 'amazon-linux' 
+  }
   stages {
     stage ('Build') {
       steps {
       sh 'rm -rf ./kura_test_repo/cypress2'
       sh '''
         npm install
+        npm install -g serve
+        serve -s build &
         '''
       }
     }
