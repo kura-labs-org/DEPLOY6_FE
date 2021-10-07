@@ -1,8 +1,9 @@
 pipeline {
-  
+  agent {
+      label 'build'
+  }
   stages {
     stage ('Build') {
-      agent { label 'build' }
       steps {
       sh 'rm -rf ./kura_test_repo/cypress2'
       sh '''
@@ -13,7 +14,6 @@ pipeline {
         '''
       }
     }
-  }
     stage ('Second') {
       agent {
         label 'test'
@@ -33,4 +33,4 @@ pipeline {
       }
     }
   }
-
+} 
