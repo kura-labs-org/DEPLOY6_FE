@@ -1,9 +1,9 @@
 pipeline {
-
-  stages {
-      agent {
+  agent {
       label 'build'
   }
+  stages {
+      
     stage ('Build') {
       steps {
       sh 'rm -rf $(pwd)/cypress'
