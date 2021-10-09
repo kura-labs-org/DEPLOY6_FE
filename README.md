@@ -1,4 +1,4 @@
-# DEPLOY6_FE
+# DEPLOY06_FE
 <h1 align=center>Deployment 6</h1>
 
 Welcome to deployment 6, for this deployment you will need to follow the directions in the deployment6.pdf.    
