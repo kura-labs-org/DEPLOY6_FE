@@ -1,5 +1,7 @@
 # Not finished writting documentation but had a successful deployment
-## Cr
+## Create a Master Jenkins EC2 instance
+## Create 2 other ec2 instances that will serves a s agents for the master EC2
+## The agents will serve as a platform to build the application and the other to test the application
 ![Screenshot 2021-09-25 223459](https://user-images.githubusercontent.com/60336145/135954593-787a7683-4382-4c86-8296-03950455c37a.png)
 ![Screenshot 2021-09-25 223532](https://user-images.githubusercontent.com/60336145/135954594-efbd7396-e9ca-4ae0-8ade-0881f9f115b5.png)
 ![Screenshot 2021-09-25 223753](https://user-images.githubusercontent.com/60336145/135954595-189afb6a-9b9f-4609-a1d5-d45cce8bf906.png)
