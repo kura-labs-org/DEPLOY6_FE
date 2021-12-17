@@ -1,0 +1,33 @@
+pipeline {
+  agent {
+    docker 'python3.10-nodejs17-alpine'
+  }
+  stages {
+    stage ('Build') {
+      steps {
+      sh 'rm -rf ./cypress'
+      sh '''
+        npm install
+        npm run build
+        sudo npm install -g serve
+        serve -s build&
+        '''
+      }
+    }
+    stage ('Test') {
+      steps {
+      sh ''' 
+        npm install cypress
+        npm install mocha
+        npx cypress run --spec ./cypress/test.spec.js
+        '''
+      }
+      post {
+        always {
+          junit 'results/cypress-report.xml'
+        }
+          
+      }
+    }
+  }
+} 
