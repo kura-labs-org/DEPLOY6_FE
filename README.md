@@ -123,7 +123,7 @@ Now, you will see on your **Jenkins** console all three EC2s connected as shown 
 
 ## 2. Fork the [repository](https://github.com/kura-labs-org/DEPLOY6_FE) where the codes are.
 
-**2.1** Create a new repository (I named it [Deploy6](https://github.com/ibrahima1289/Deploy6))
+**2.1** Create a new repository (I named it [kura-deployment-6](https://github.com/ibrahima1289/kura-deployment-6))
 
 Remove `PDF`, and `README` files.
 
